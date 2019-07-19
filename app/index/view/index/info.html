@@ -1,0 +1,20 @@
+<div style="margin: 9px">
+    <a href="" onclick="history.back();return false;">返回</a>
+</div>
+<img src="" style="width: 100%" id="info-img">
+<pre></pre>
+<script>
+    $(document).ready(()=>{
+        $.getJSON("?s=index/index/infoAPI&id={$id}",(res)=>{
+            if (res.code!=200){
+                location.href="/";
+                return;
+            }
+            document.title=res.data.title;
+            $("#title").text(res.data.title);
+            $("#info-img").attr("src",res.data.pic)
+            $("pre").empty();
+            $("pre").html(res.data.content);
+        })
+    })
+</script>

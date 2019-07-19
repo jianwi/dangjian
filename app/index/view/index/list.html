@@ -1,0 +1,36 @@
+<div id="img-show">
+    <img src="" alt="">
+</div>
+<div id="container">
+    <ul class="list">
+        <li hidden>
+            <img src="img/1.jpg">
+            <h4>厉害了我的国</h4>
+            <small>2019-10-1</small>
+        </li>
+    </ul>
+</div>
+<script>
+    $(document).ready(()=>{
+        $.getJSON("?s=index/index/listAPI&id={$id}",(res)=>{
+            if (res.code!=200){
+                location.href="/";
+                return;
+            }
+            document.title=res.data.info.name;
+            $("#title").text(res.data.info.name);
+            $("#img-show img").attr("src",res.data.info.pic)
+            $(".list").empty();
+            for (let li of res.data.list){
+                let html=`
+                 <li onclick='location.href="?s=index/index/info&id=${li.id}"'>
+                    <img src="${li.pic}">
+                    <h4>${li.title}</h4>
+                    <small>${li.date}</small>
+                </li>
+                `
+                $(".list").append(html);
+            }
+        })
+    })
+</script>
