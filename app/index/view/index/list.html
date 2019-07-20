@@ -18,7 +18,7 @@
                 return;
             }
             document.title=res.data.info.name;
-            $("#title").text(res.data.info.name);
+            // $("#title").text(res.data.info.name);
             $("#img-show img").attr("src",res.data.info.pic)
             $(".list").empty();
             for (let li of res.data.list){

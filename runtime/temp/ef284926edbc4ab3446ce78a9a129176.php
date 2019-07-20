@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"/home/wwwroot/ke.lnmp.org/tp5/public/../app/index/view/index/info.html";i:1563456852;s:56:"/home/wwwroot/ke.lnmp.org/tp5/app/index/view/layout.html";i:1563456819;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"/home/wwwroot/ke.lnmp.org/tp5/public/../app/index/view/index/info.html";i:1563456852;s:56:"/home/wwwroot/ke.lnmp.org/tp5/app/index/view/layout.html";i:1563622241;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +13,7 @@
 </head>
 <body>
 <header>
-    <h4 id="title">
+    <h4 id="title" onclick="location.href='?'">
         红细胞e站
     </h4>
 </header>
@@ -40,11 +40,6 @@
 </script>
     </main>
 <footer>
-    <nav>
-        <a href="?">首页</a>
-        <a href="">课程</a>
-        <a href="">我的</a>
-    </nav>
 </footer>
 <script src="/tp5/hxb/static/js/bootstrap.min.js"></script>
 <script src="/tp5/hxb/static/js/main.js"></script>
